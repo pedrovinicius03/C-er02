@@ -48,7 +48,39 @@ namespace C__us13.Classes
 
         public bool validarDataNasc(DateTime dataNasc)
         {
+            DateTime dataAtual = DateTime.Today;
+            double anos = (dataNasc - dataAtual).TotalDays / 365;
+
+            Console.WriteLine(anos);
+
+            if (anos >= 18)
+            {
+                return true; 
+            }
+            return false;
+        }   
+                public bool validarDataNasc(string dataNasc)
+        {
+                if (DateTime.TryParse(dataNasc, out DateTime dataConvertida))
+                {
+                    DateTime dataAtual = DateTime.Today;
+                    double anos = (dataAtual - dataConvertida).TotalDays / 365;
+
+                    Console.WriteLine(anos);
+
+                    if (anos >= 18)
+            {
+                return true; 
+            }
+            return false;
+
+                }
+                return false;
+        }
+
+        internal object ValidardataNasc(DateTime dataNasc)
+        {
             throw new NotImplementedException();
         }
-    }
+    }   
 }
