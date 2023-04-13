@@ -14,6 +14,35 @@ namespace C__us13.Classes
 
         public override float CalcularImposto(float rendimentos)
         {
+            if(rendimentos <= 1500)
+            {
+                return 0;
+            }
+            
+            else if ( rendimentos > 1500 && rendimentos <= 3500)
+            {
+                float resultado = (rendimentos / 100) * 3.5f;
+                return resultado;
+            }
+            
+            else if ( rendimentos > 3500 && rendimentos <= 6000)
+            {
+                float resultado = (rendimentos / 100) * 3.5f;
+                return resultado;
+            }
+            else 
+            {
+                float resultado = (rendimentos / 100) *5;
+                return resultado;
+            }
+            
+            
+            
+            
+            
+            
+            
+            
             throw new NotImplementedException();
         }
 
